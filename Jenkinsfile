@@ -22,7 +22,7 @@ pipeline {
     stage('distribution') {
       steps {     	
         sh "tar -cf ${env.DIST_FILE} src"
-        archiveArtifacts env.DIST_FILE + ", src"
+        archiveArtifacts env.DIST_FILE + ", src/**"
       }
     }
 
@@ -39,15 +39,15 @@ pipeline {
             def host = 'axonivya@217.26.51.247'
 
             // copy
-            //sh "scp ${env.DIST_FILE} $host:$targetFile"
+            sh "scp ${env.DIST_FILE} $host:$targetFile"
 
             // untar
-            //sh "ssh $host mkdir $targetFolder"
-            //sh "ssh $host tar -xf $targetFile -C $targetFolder"
-            //sh "ssh $host rm -f $targetFile"
+            sh "ssh $host mkdir $targetFolder"
+            sh "ssh $host tar -xf $targetFile -C $targetFolder"
+            sh "ssh $host rm -f $targetFile"
             
             // symlink
-            //sh "ssh $host ln -fns $targetFolder/src/web /home/axonivya/www/www.axonivy.cloud/linktoweb"
+            //sh "ssh $host ln -fns $targetFolder/src/web /home/axonivya/www/release.axonivy.com/linktoweb"
           }
         }
       }

@@ -587,16 +587,11 @@ ul {
 
 .panel-heading .panel-title a:before {
 	font-family: FontAwesome;
-	content: "\f067";
 	position: absolute;
 	font-size: 12px;
 	position: absolute;
 	right: 20px;
 	top: 21px;
-}
-
-.panel-heading.active .panel-title a:before {
-	content: "\f068";
 }
 
 .panel-body {

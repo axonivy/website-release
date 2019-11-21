@@ -36,17 +36,15 @@ jQuery(function($) {'use strict',
 		$('.sp-effect4').toggleClass('anim-active4');
 		$('.sp-effect4').toggleClass('animated fadeInRight');
 	},{offset:'100%'});
-	
-	
-	
-	
+
 	//Count Options
-	$('#mobile_device').waypoint(function() {
-    $('.timer').each(count);
+	$('#portal').waypoint(function() {
+		$('.timer').each(count);
+
 		function count(options) {
-		var $this = $(this);
-		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-		$this.countTo(options);
+			var $this = $(this);
+			options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+			$this.countTo(options);
 		}
 	});
 	

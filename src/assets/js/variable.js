@@ -41,7 +41,7 @@ var _countdownTimezone = '+2'; // timezone
 /*=================================================
 background style
 =================================================*/
-var _bgStyle = 2; // 1 = image, 2 = slideshow, 3 = html5 video, 4 = youtube video
+var _bgStyle = 1; // 1 = image, 2 = slideshow, 3 = html5 video, 4 = youtube video
 
 /*=================================================
 _bgStyle = 1

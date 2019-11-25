@@ -73,11 +73,11 @@ jQuery(function($) {'use strict',
 	{
 		var icon = $('#muteAudio').find("i");
 		icon.toggleClass("ion-play");
-		icon.toggleClass("ion-volume-mute");
+		icon.toggleClass("ion-volume-high");
 
 		var headerIcon = $('#muteAudioHeader').find("i");
 		headerIcon.toggleClass("ion-play");
-		headerIcon.toggleClass("ion-volume-mute");
+		headerIcon.toggleClass("ion-volume-high");
 
 		var audioPlayer = document.getElementsByTagName('audio')[0];
 		audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();

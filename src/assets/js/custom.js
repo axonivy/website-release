@@ -68,5 +68,14 @@ jQuery(function($) {'use strict',
 	        $(".promo-one-slider").slideToggle(1000, 'swing');
 	    });
 	});
+
+	$("#muteAudio").click(function()
+	{
+		var icon = $(this).find("i");
+		icon.toggleClass("ion-volume-high");
+		icon.toggleClass("ion-volume-mute");
+		var audioPlayer = document.getElementsByTagName('audio')[0];
+		audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+	});
 	
 });

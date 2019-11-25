@@ -587,16 +587,11 @@ ul {
 
 .panel-heading .panel-title a:before {
 	font-family: FontAwesome;
-	content: "\f067";
 	position: absolute;
 	font-size: 12px;
 	position: absolute;
 	right: 20px;
 	top: 21px;
-}
-
-.panel-heading.active .panel-title a:before {
-	content: "\f068";
 }
 
 .panel-body {
@@ -808,7 +803,7 @@ Section 8
 	overflow: hidden;
     position: relative;
     max-width: 70%;
-    height: 210px;
+    height: 350px;
     margin: 0 auto;
 }
 
@@ -929,7 +924,7 @@ Section 10
 		height: 240px !important;
 	}
 	.carousel-inner-height-voices {
-		height: 300px !important;
+		height: 450px !important;
 	}
 }
 
@@ -1119,7 +1114,7 @@ Section 12
 .section12 .section12-image {
 	position:relative;
 	overflow:hidden;
-	height: 120px;
+	height: 200px;
 }
 
 

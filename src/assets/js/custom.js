@@ -36,17 +36,15 @@ jQuery(function($) {'use strict',
 		$('.sp-effect4').toggleClass('anim-active4');
 		$('.sp-effect4').toggleClass('animated fadeInRight');
 	},{offset:'100%'});
-	
-	
-	
-	
+
 	//Count Options
-	$('#mobile_device').waypoint(function() {
-    $('.timer').each(count);
+	$('#portal').waypoint(function() {
+		$('.timer').each(count);
+
 		function count(options) {
-		var $this = $(this);
-		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-		$this.countTo(options);
+			var $this = $(this);
+			options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+			$this.countTo(options);
 		}
 	});
 	
@@ -60,49 +58,6 @@ jQuery(function($) {'use strict',
 	$('#accordion-two .panel-default .panel-heading .panel-title a').on('click',function(){'use strict',
 		$('.panel-title a').removeClass('panel-title-text');
 		$(this).addClass('panel-title-text');
-	});
-	
-	//Scrolling smoother in all Browsers
-	if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-		window.onmousewheel = document.onmousewheel = wheel;
-
-	var time = 600;
-	var distance = 270;
-
-	function wheel(event) {
-    if (event.wheelDelta) delta = event.wheelDelta / 120;
-    else if (event.detail) delta = -event.detail / 3;
-
-    handle();
-		if (event.preventDefault) event.preventDefault();
-    event.returnValue = false;
-	}
-
-	function handle() {
-
-    $('html, body').stop().animate({
-			scrollTop: $(window).scrollTop() - (distance * delta)
-    }, time);
-}
-
-
-	$(document).keydown(function (e) {
-
-    switch (e.which) {
-			//up
-			case 38:
-				$('html, body').stop().animate({
-					scrollTop: $(window).scrollTop() - distance
-				}, time);
-				break;
-
-					//down
-			case 40:
-				$('html, body').stop().animate({
-					scrollTop: $(window).scrollTop() + distance
-				}, time);
-				break;
-		}
 	});
 
 	$(document).ready(function(){

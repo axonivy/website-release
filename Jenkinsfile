@@ -5,6 +5,14 @@ pipeline {
     }
   }
 
+  parameters {
+    booleanParam(
+      name: 'deploy',
+      description: 'Deploy release page',
+      defaultValue: false
+    )
+  }
+
   triggers {
     cron '@midnight'
   }
@@ -28,7 +36,10 @@ pipeline {
 
     stage('deploy') {
       when {
-        branch 'master'
+        allOf {
+          branch 'master'
+          expression {return params.deploy}
+        }
       }
 
       steps {

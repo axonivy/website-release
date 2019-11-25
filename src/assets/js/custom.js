@@ -69,11 +69,16 @@ jQuery(function($) {'use strict',
 	    });
 	});
 
-	$("#muteAudio").click(function()
+	$("#muteAudio, #muteAudioHeader").click(function()
 	{
-		var icon = $(this).find("i");
-		icon.toggleClass("ion-volume-high");
+		var icon = $('#muteAudio').find("i");
+		icon.toggleClass("ion-play");
 		icon.toggleClass("ion-volume-mute");
+
+		var headerIcon = $('#muteAudioHeader').find("i");
+		headerIcon.toggleClass("ion-play");
+		headerIcon.toggleClass("ion-volume-mute");
+
 		var audioPlayer = document.getElementsByTagName('audio')[0];
 		audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
 	});

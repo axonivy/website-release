@@ -68,5 +68,19 @@ jQuery(function($) {'use strict',
 	        $(".promo-one-slider").slideToggle(1000, 'swing');
 	    });
 	});
+
+	$("#muteAudio, #muteAudioHeader").click(function()
+	{
+		var icon = $('#muteAudio').find("i");
+		icon.toggleClass("ion-play");
+		icon.toggleClass("ion-volume-high");
+
+		var headerIcon = $('#muteAudioHeader').find("i");
+		headerIcon.toggleClass("ion-play");
+		headerIcon.toggleClass("ion-volume-high");
+
+		var audioPlayer = document.getElementsByTagName('audio')[0];
+		audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+	});
 	
 });

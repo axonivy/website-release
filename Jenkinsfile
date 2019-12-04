@@ -58,7 +58,7 @@ pipeline {
             sh "ssh $host rm -f $targetFile"
             
             // symlink
-            sh "ssh $host ln -fns $targetFolder/src/web /home/axonivya/www/release.axonivy.com/linktoweb"
+            sh "ssh $host ln -fns $targetFolder/src /home/axonivya/www/release.axonivy.com/linktoweb"
           }
         }
       }
